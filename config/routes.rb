@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  # get 'static_pages/home'
+  resources: location
+  resources: corkboard
+  resources: user
 
   get 'test', to: 'static_pages#test'
 
