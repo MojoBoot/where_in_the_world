@@ -2,3 +2,31 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "grayscale";
+
+@import url(https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+.lora_font {
+  font-family: 'Lora', serif;
+}
+
+.montserrat_font {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.intro .intro-body input {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+    background: 0;
+    border: 0;
+    border-bottom: 3px solid #fff;
+    color: #ffc712;
+    text-shadow: 2px 2px #000000;
+    font-size: 40px;
+    outline: none;
+    text-align: center;
+    cursor: auto;
+
+}

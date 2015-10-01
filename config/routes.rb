@@ -1,8 +1,41 @@
 Rails.application.routes.draw do
-  resources: location
-  resources: corkboard
-  resources: user
+  # get 'users/index'
+  #
+  # get 'users/new'
+  #
+  # get 'users/show'
+  #
+  # get 'users/edit'
 
+  devise_for :users
+  # get 'corkboard/new'
+  #
+  # get 'corkboard/index'
+  #
+  # get 'corkboard/show'
+  #
+  # get 'corkboard/edit'
+  #
+  # get 'user/new'
+  #
+  # get 'user/index'
+  #
+  # get 'user/show'
+  #
+  # get 'user/edit'
+  #
+  # get 'location/new'
+  #
+  # get 'location/index'
+  #
+  # get 'location/show'
+  #
+  # get 'location/edit'
+
+  resources :locations do
+    resources :corkboards
+  end
+  # resources :users
   get 'test', to: 'static_pages#test'
 
   root 'static_pages#home'

@@ -1,0 +1,15 @@
+<div class="panel-body">
+  <%= simple_form_for @location do |f| %>
+    <%= f.input :city, label: false, input_html: {placeholder: "City"} %>
+    <%= f.input :country, label: false %>
+    <%= f.input :continent, label: false, input_html: {placeholder: "Continent"} %>
+    <%= f.input :population, label: false, input_html: {placeholder: "Population"} %>
+    <%= f.input :language, label: false, input_html: {placeholder: "Primary Language"} %>
+    <%= f.input :image, label: false, input_html: {placeholder: "Image"} %>
+    <%= f.input :description, label: false, as: :text, input_html: {placeholder: "Description"} %>
+    <%= f.input :happiness, label: false, input_html: {placeholder: "Happiness Index Rank"} %>
+    <%= f.input :economic_index, label: false, input_html: {placeholder: "Economic Index Rank"} %>
+
+    <%= f.submit "Submit".html_safe, class: "btn btn-lg btn-danger"%>
+  <%end %>
+</div>

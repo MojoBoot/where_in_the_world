@@ -1,2 +1,29 @@
-<h1>StaticPages#test</h1>
-<p>Find me in app/views/static_pages/test.html.erb</p>
+
+<br>
+<br>
+<div class = "container_fluid"
+  <div class = "prompt" style= "display: block"
+    <h1><center> What is your main focus for today? <center>
+      <br>
+      <input type = "text">
+    </h1>
+
+<head>
+    <script>
+    require 'open-uri'
+    require 'json'
+
+    open('http://api.wunderground.com/api/95dee549dd84ecec/geolookup/conditions/q/IA/Cedar_Rapids.json') do |f|
+      json_string = f.read
+      parsed_json = JSON.parse(json_string)
+      location = parsed_json['location']['city']
+      temp_f = parsed_json['current_observation']['temp_f']
+      print "Current temperature in #{location} is: #{temp_f}\n"
+    end
+    </script>
+  </head>
+
+
+
+  <div>
+</div>

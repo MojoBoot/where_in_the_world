@@ -1,0 +1,77 @@
+<div class="container-fluid">
+
+  <br>
+    <div class="col-md-3">
+      <br>
+      <div class="panel panel-default">
+      <br>
+      <div class="panel-heading">
+          <!-- <div class = "well"> -->
+            <h4>Questions or Advice for other Travelers about <%= @location.city%> ?</h4>
+            <%= form_for([@location, @location.corkboards.build]) do |f| %>
+              <p>
+                <%= f.label :subject %><br>
+                <%= f.text_field :title %><br>
+
+                <%= f.label :comment %><br>
+                <%= f.text_area :comment %><br>
+                <%= f.submit "Submit".html_safe, class: "btn btn-xs btn-danger" %>
+              </p>
+            <% end %>
+
+            <div class="well">
+              <h4>Traveler Tips and Tricks:</h4>
+                <% @location.corkboards.each do |corkboard| %>
+                  <p><strong> <%= corkboard.title %> </strong><br>
+                  <%= corkboard.comment %>
+                  </p>
+                  <hr>
+                <% end %>
+            </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="panel panel-default">
+    <div class="col-md-9">
+    <br>
+    <h1>Living in <%= @location.city %></h1>
+      <div class="temp">
+      <h3>Current temperature: <%= @location.temperature %></h3>
+
+      <div class="col-md-8">
+        <%=image_tag(@location.image, class: "img-responsive thumbnail") %>
+
+        <p> <%= @location.description %> </p>
+        <hr>
+
+          <h3>Housing and Work Related:</h3>
+          <ul>
+          <h4>Looking for housing:</h4>
+            <li><a href= "http://rome.en.craigslist.it/search/apa">Craigslist Rentals</a></li>
+            <br>
+          <h4>Looking for work visa information:</h4>
+          <li>
+            <a href= "http://italy.usembassy.gov/acs/general-visiting.html">Work visa information via US Embassy</a></li>
+          </ul>
+      </div>
+
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+          <!-- <h1> <%= @location.name%> </h1> -->
+            <h4><%= @location.happiness %>: Happiness Index Rank 1-111 </h4>
+            <h4> <%= @location.economic_index %>: Economic Index Rank 1-100 </h4>
+            <h4>Continent: <%= @location.continent %> </h3>
+            <h4>Population: <%= @location.population %> </h4>
+            <h4>Primary Language(s): <%= @location.language %> </h4>
+            <h4>Other: </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,32 @@
+<div class="col-md-8 col-md-offset-2">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+
+      <h2> Sign Up for Where in the World </h2>
+      <div class="panel-body">
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
+
+      <div class="form-inputs">
+        <%= f.input :email, required: true, autofocus: true %>
+        <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+        <%= f.input :password_confirmation, required: true %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.submit "Sign up".html_safe, class: 'btn btn-lg btn-default' %>
+      </div>
+
+        <% end %>
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <div id="well">
+      Already signed up? <%= render "devise/shared/links" %>
+      </div>
+
+</div>
+</div>
+</div>

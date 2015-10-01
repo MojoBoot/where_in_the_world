@@ -6,6 +6,10 @@ class CreateLocations < ActiveRecord::Migration
       t.integer :population
       t.string :image
       t.text :description
+      t.integer :happiness
+      t.integer :economic_index
+
+      # t.references :, index: true, foreign_key: true
 
       t.timestamps null: false
     end
