@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
-gem 'sqlite3'
+
 
 #Front End Tools
 gem 'sass-rails', '~> 5.0'
@@ -25,6 +25,7 @@ gem 'wunderground'
 gem 'country_select'
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'byebug'
   gem 'pry-rails'
   gem 'pry-byebug'
