@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151001031649) do
+ActiveRecord::Schema.define(version: 20151002220458) do
 
   create_table "corkboards", force: :cascade do |t|
     t.string   "title"
@@ -30,11 +30,24 @@ ActiveRecord::Schema.define(version: 20151001031649) do
     t.text     "description"
     t.integer  "happiness"
     t.integer  "economic_index"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.string   "language"
-    t.string   "country"
     t.string   "city"
+    t.string   "nation"
+    t.string   "visa_info"
+    t.string   "job_info"
+    t.string   "rental_info"
+    t.integer  "rent"
+    t.integer  "disp_money"
+    t.integer  "utilities"
+    t.integer  "trans"
+    t.decimal  "meal_cost"
+    t.decimal  "wine_cost"
+    t.decimal  "cheese_cost"
+    t.decimal  "orange_cost"
+    t.decimal  "bread_cost"
+    t.decimal  "cappuccino_cost"
   end
 
   create_table "users", force: :cascade do |t|

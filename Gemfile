@@ -18,6 +18,8 @@ gem 'font-awesome-sass', '~> 4.4.0'
 #Other
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'rest-client'
+gem 'json'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'wunderground'
 gem 'country_select'

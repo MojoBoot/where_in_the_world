@@ -1,7 +1,7 @@
 <div class="panel-body">
   <%= simple_form_for @location do |f| %>
     <%= f.input :city, label: false, input_html: {placeholder: "City"} %>
-    <%= f.input :country, label: false %>
+    <%= f.input :nation, label: false, input_html: {placeholder: "Country"} %>
     <%= f.input :continent, label: false, input_html: {placeholder: "Continent"} %>
     <%= f.input :population, label: false, input_html: {placeholder: "Population"} %>
     <%= f.input :language, label: false, input_html: {placeholder: "Primary Language"} %>
@@ -9,7 +9,18 @@
     <%= f.input :description, label: false, as: :text, input_html: {placeholder: "Description"} %>
     <%= f.input :happiness, label: false, input_html: {placeholder: "Happiness Index Rank"} %>
     <%= f.input :economic_index, label: false, input_html: {placeholder: "Economic Index Rank"} %>
-
+    <%= f.input :visa_info, label: false, input_html: {placeholder: "Work Visa Information"} %>
+    <%= f.input :job_info, label: false, input_html: {placeholder: "Local Job Postings"} %>
+    <%= f.input :rental_info, label: false, input_html: {placeholder: "Housing Rental Information"} %>
+    <%= f.input :rent, label: false, input_html: {placeholder: "Avg Monthly Rent/1 bed - city"} %>
+    <%= f.input :meal_cost, label: false, input_html: {placeholder: "Inexpensive Restaurant Meal"} %>
+    <%= f.input :disp_money, label: false, input_html: {placeholder: "Monthly Disposable Income"} %>
+    <%= f.input :utilities, label: false, input_html: {placeholder: "Monthly Utilities"} %>
+    <%= f.input :trans, label: false, input_html: {placeholder: "Monthly Public Transportation"} %>
+    <%= f.input :wine_cost, label: false, input_html: {placeholder: "Avg Bottle Wine"} %>
+    <%= f.input :cheese_cost, label: false, input_html: {placeholder: "Local Cheese - 1 lb"} %>
+    <%= f.input :orange_cost, label: false, input_html: {placeholder: "Oranges - 1 lb"} %>
+    <%= f.input :bread_cost, label: false, input_html: {placeholder: "Loaf of Bread"} %>
     <%= f.submit "Submit".html_safe, class: "btn btn-lg btn-danger"%>
   <%end %>
 </div>

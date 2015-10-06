@@ -12,5 +12,5 @@
 
 class Corkboard < ActiveRecord::Base
   belongs_to :location
-  has_many :users
+  has_one :user
 end

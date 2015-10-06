@@ -6,8 +6,9 @@
       <div class="panel panel-default">
       <br>
       <div class="panel-heading">
+        
           <!-- <div class = "well"> -->
-            <h4>Questions or Advice for other Travelers about <%= @location.city%> ?</h4>
+            <h4>Questions or Advice for other Travelers about <%= @location.city %> ?</h4>
             <%= form_for([@location, @location.corkboards.build]) do |f| %>
               <p>
                 <%= f.label :subject %><br>
@@ -30,6 +31,7 @@
             </div>
     </div>
   </div>
+
 </div>
 
 
@@ -38,8 +40,8 @@
     <div class="col-md-9">
     <br>
     <h1>Living in <%= @location.city %></h1>
-      <div class="temp">
-      <h3>Current temperature: <%= @location.temperature %></h3>
+
+    <center><h3><div class="glyphicon glyphicon-cloud" aria-hidden="true"></div> Current temperature: <%= @temperature %></h3></center>
 
       <div class="col-md-8">
         <%=image_tag(@location.image, class: "img-responsive thumbnail") %>
@@ -47,31 +49,34 @@
         <p> <%= @location.description %> </p>
         <hr>
 
-          <h3>Housing and Work Related:</h3>
-          <ul>
-          <h4>Looking for housing:</h4>
-            <li><a href= "http://rome.en.craigslist.it/search/apa">Craigslist Rentals</a></li>
-            <br>
-          <h4>Looking for work visa information:</h4>
-          <li>
-            <a href= "http://italy.usembassy.gov/acs/general-visiting.html">Work visa information via US Embassy</a></li>
-          </ul>
+        <%= render "thumbnails" %>
       </div>
 
       <div class="col-md-4">
         <div class="panel panel-default">
           <div class="panel-heading">
-          <!-- <h1> <%= @location.name%> </h1> -->
-            <h4><%= @location.happiness %>: Happiness Index Rank 1-111 </h4>
-            <h4> <%= @location.economic_index %>: Economic Index Rank 1-100 </h4>
-            <h4>Continent: <%= @location.continent %> </h3>
-            <h4>Population: <%= @location.population %> </h4>
-            <h4>Primary Language(s): <%= @location.language %> </h4>
-            <h4>Other: </h4>
+            <h4>Happiness Rank: <span><%= @location.happiness %> </span></h4>
+            <h4>Economic Rank: <span><%= @location.economic_index %></span></h4>
+            <h4>Country: <span><%= @location.nation %> </span></h4>
+            <h4>Continent:<span> <%= @location.continent %> </span></h3>
+            <h4>Population:<span> <%= @location.population %></span></h4>
+            <h4>Language(s):<span> <%= @location.language %><span></h4>
+            <hr>
+            <h4><span>Living Expenses (USD):</span></h4>
+            <h5>Rent 1BD/City: <span> $<%= @rent_get %></span></h5>
+            <h5>Average Meal- Cheap <span> $<%= @meal_get %></span></h5>
+            <h5>Monthly Disposable Income: <span> $<%= @disp_income_get %></span></h5>
+            <h5>Monthly Utilities: <span> $<%= @utilities_get %></span></h5>
+            <h5>Monthly Public Transportation: <span> $<%= @trans_get %></span></h5>
+            <h5>Avg Bottle Wine: <span> $<%= @wine_get %></span></h5>
+            <h5>Cappuccino: <span> $<%= @cappuccino_get %></span></h5>
+            <h5>Oranges - 2lbs: <span> $<%= @oranges_get %></span></h5>
+            <h5>Loaf of Bread: <span> $<%= @bread_get %></span></h5>
+
           </div>
         </div>
       </div>
+
     </div>
-
-
+</div>
 </div>

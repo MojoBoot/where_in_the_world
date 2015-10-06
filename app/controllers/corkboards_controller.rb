@@ -12,4 +12,5 @@ def corkboard_params
   params.require(:corkboard).permit(:title, :comment)
 end
 
+
 end
