@@ -18,7 +18,7 @@ end
     @location = get_location
     @corkboards = @location.corkboards
 
-    w_api = Wunderground.new
+    w_api = Wunderground.new("95dee549dd84ecec")
     @temperature = w_api.conditions_for(@location.nation, @location.city)['current_observation']['temperature_string']
 
 

@@ -5,7 +5,10 @@
 @import "grayscale";
 
 @import url(https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic);
+
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:300|Work+Sans:300|Nixie+One);
 
 .lora_font {
   font-family: 'Lora', serif;
@@ -14,6 +17,20 @@
 .montserrat_font {
   font-family: 'Montserrat', sans-serif;
 }
+
+.raleway_font {
+    font-family: 'Raleway', sans-serif;
+}
+
+.nixie+one_font {
+    font-family: 'Nixie One', cursive;
+}
+
+.work+sans_font {
+    font-family: 'Work Sans', sans-serif;
+}
+
+
 
 .intro .intro-body input {
     width: 60%;
@@ -24,7 +41,7 @@
     border-bottom: 3px solid #fff;
     color: #ffc712;
     text-shadow: 2px 2px #000000;
-    font-size: 40px;
+    font-size: 56px;
     outline: none;
     text-align: center;
     cursor: auto;
