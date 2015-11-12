@@ -27,6 +27,7 @@
 #  orange_cost     :decimal(, )
 #  bread_cost      :decimal(, )
 #  cappuccino_cost :decimal(, )
+#  quality_life    :integer
 #
 
 class Location < ActiveRecord::Base

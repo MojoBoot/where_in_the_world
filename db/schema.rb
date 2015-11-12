@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151002220458) do
+ActiveRecord::Schema.define(version: 20151112072246) do
 
   create_table "corkboards", force: :cascade do |t|
     t.string   "title"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20151002220458) do
     t.decimal  "orange_cost"
     t.decimal  "bread_cost"
     t.decimal  "cappuccino_cost"
+    t.integer  "quality_life"
   end
 
   create_table "users", force: :cascade do |t|

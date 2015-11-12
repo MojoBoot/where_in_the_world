@@ -55,8 +55,10 @@
       <div class="col-md-4">
         <div class="panel panel-default">
           <div class="panel-heading">
+            <h4>Life Quality Rank: <span><%= @location.quality_life %> </span></h4>
             <h4>Happiness Rank: <span><%= @location.happiness %> </span></h4>
-            <h4>Economic Rank: <span><%= @location.economic_index %></span></h4>
+            <h4>Economic Freedom Rank: <span><%= @location.economic_index %></span></h4>
+            <hr>
             <h4>Country: <span><%= @location.nation %> </span></h4>
             <h4>Continent:<span> <%= @location.continent %> </span></h3>
             <h4>Population:<span> <%= @location.population %></span></h4>

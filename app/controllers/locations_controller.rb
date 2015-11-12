@@ -102,7 +102,7 @@ end
 private
 
 def location_params
-  params.require(:location).permit(:city, :nation, :continent, :population, :language, :image, :description, :happiness, :economic_index, :visa_info, :job_info, :rental_info, :rent, :disp_money, :utilities, :trans, :meal_cost, :wine_cost, :orange_cost, :bread_cost)
+  params.require(:location).permit(:city, :nation, :continent, :population, :language, :image, :description, :happiness, :economic_index, :visa_info, :job_info, :rental_info, :rent, :disp_money, :utilities, :trans, :meal_cost, :wine_cost, :orange_cost, :bread_cost, :quality_life)
 end
 
 
