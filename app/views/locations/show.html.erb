@@ -43,6 +43,10 @@
 
     <center><h3><div class="glyphicon glyphicon-cloud" aria-hidden="true"></div> Current temperature: <%= @temperature %></h3></center>
 
+
+      <audio width="125" height="48" controls="controls" autoplay="autoplay"><source src="http://178.19.116.3:60007/stream" type="audio/mpeg"/>Your browser does not support HTML5 audio. Please update your browser to view this media content.</audio>
+           
+
       <div class="col-md-8">
         <%=image_tag(@location.image, class: "img-responsive thumbnail") %>
 
