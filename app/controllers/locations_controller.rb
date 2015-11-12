@@ -70,6 +70,7 @@ end
 
   def create
     @location = Location.create(location_params)
+    
     if @location.save
       redirect_to location_path(@location)
     else
