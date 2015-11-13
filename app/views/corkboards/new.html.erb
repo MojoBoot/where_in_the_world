@@ -1,2 +1,14 @@
 <h1>Corkboard#new</h1>
 <p>Find me in app/views/corkboard/new.html.erb</p>
+
+<div class = "panel body">
+    <h4>Questions or Advice for other Travelers?</h4>
+
+    <%= simple_form_for ([@location, @location.corkboards.build]) do |f| %>
+        <%= f.input :subject, label: false, input_html: {placeholder: "Subject"} %> 
+        <%= f.input :comment, label: false, input_html: {placeholder: "Comment/Question"} %>
+        
+        <%= f.submit "Submit".html_safe, class: "btn btn-lg btn-danger" %>
+      </p>
+    <% end %>
+</div>

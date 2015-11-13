@@ -2,14 +2,8 @@ class LocationsController < ApplicationController
   before_filter :authenticate_user!, except: [ :index, :show]
 
   def index
-
-    # if params[:search]
-    #   @location = Location.find_by_city(params[:search])
-    # else
-      @locations = Location.all
-
-  # end
-end
+    @locations = Location.all
+  end
 
 # !!!!!!!!
 # remember to source secrets.sh

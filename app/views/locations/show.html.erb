@@ -21,7 +21,8 @@
             <% end %>
 
             <div class="well">
-              <h4>Traveler Tips and Tricks:</h4>
+              <h4>Recent Traveler Tips and Tricks:   <%= link_to 'See All', location_corkboards_path(@location), class: 'btn-xs btn-default' %></h4>
+
                 <% @location.corkboards.each do |corkboard| %>
                   <p><strong><span><%= corkboard.title %></span></strong><br>
                   <%= corkboard.comment %>
@@ -41,10 +42,10 @@
     <br>
     <h1>Living in <%= @location.city %></h1>
 
-    <center><h3><div class="glyphicon glyphicon-cloud" aria-hidden="true"></div> Current temperature: <%= @temperature %></h3></center>
+    <center><h3><div class="glyphicon glyphicon-cloud" aria-hidden="true"></div>  Current temperature: <%= @temperature %></h3></center>
 
 
-      <audio width="125" height="48" controls="controls" autoplay="autoplay"><source src="http://178.19.116.3:60007/stream" type="audio/mpeg"/>Your browser does not support HTML5 audio. Please update your browser to view this media content.</audio>
+      <audio width="125" height="48" controls="controls"><source src="http://emisorasmusicales.es:8030/activafmaac.mp3" type="audio/mpeg"/>Your browser does not support HTML5 audio. Please update your browser to view this media content.</audio>
            
 
       <div class="col-md-8">
@@ -60,9 +61,23 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4><span>Life, Liberty & Happiness</span></h4>
-            <h4>"Quality of Life" Rank: <span><%= @location.quality_life %> </span></h4>
-            <h4>"Happiness" Rank: <span> <%= @location.happiness %> </span></h4>
-            <h4>"Economic Freedom" Rank: <span> <%= @location.economic_index %></span></h4>
+
+            
+            <h4><strong><a href="http://monocle.com/film/affairs/the-monocle-quality-of-life-survey-2015/" target="_blank" data-toggle="tooltip" data-placement="left" title="Based on the Top 25 countries in Monocle's 2015 Global Livability Index. Important criteria in this survey are safety/crime, international connectivity, climate/sunshine, quality of architecture, public transport, tolerance, environmental issues and access to nature, urban design, business conditions, pro-active policy developments and medical care.">"QUALITY of LIFE" Rank: </a></strong><span><%= @location.quality_life %> </span></h4>
+
+            <!-- This the jquery that triggers the tooltip above -->
+            <script>
+              $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip();   
+              });
+            </script>
+            <!-- It ends here -->
+
+            <h4><strong><a href="http://unsdsn.org/wp-content/uploads/2014/02/WorldHappinessReport2013_online.pdf" target="_blank" data-toggle="tooltip" data-placement="left" title="The World Happiness Report is a measure of happiness in people in over 150 countries. Six key factors include: real GDP per capita, healthy life expectancy, having someone to count on, perceived freedom to make life choices, freedom from corruption, and generosity">"Happiness" Rank: </a></strong><span> <%= @location.happiness %> </span></h4>
+
+
+            <h4><strong><a href="http://www.heritage.org/index/" target="_blank" data-toggle="tooltip" data-placement="left" title="2015 Index of Economic Freedom, an annual guide published by The Wall Street Journal and The Heritage Foundation. It covers 10 economic freedoms in 186 countries: property rights, freedom from corruption, fiscal freedom, government spending, business freedom, labor freedom, monetary freedom, trade freedom, investment freedom, and financial freedom, with equal weight being given to each.">"Economic Freedom" Rank: </a><span> <%= @location.economic_index %></span></h4>
+
             <hr>
             <h4><span>Basic Information</span></h4>
             <h4>Country: <span> <%= @location.nation %> </span></h4>

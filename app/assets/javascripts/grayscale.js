@@ -176,3 +176,4 @@ function init() {
         icon: image
     });
 }
+

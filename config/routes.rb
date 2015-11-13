@@ -38,6 +38,8 @@ Rails.application.routes.draw do
   # resources :users
   get 'test', to: 'static_pages#test'
 
+  get 'more', to: 'static_pages#more'
+
   root 'static_pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
